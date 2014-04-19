@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Ordering Made Easy by Coding House</title>
+		<meta name="description" content="A tutorial on how to recreate the effect of YouTube's little left side menu. The idea is to slide a little menu icon to the right side while revealing some menu item list beneath. " />
+		<meta name="keywords" content="Add keywords" />
+		<meta name="author" content="_yourName_ for Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<h1>Order from Local Restaurants</span></h1>
+			</header>
+			<p id="instructions"><em>To order: <b>1)</b> click on a restaurant, <b>2)</b> click on a menu item, and <b>3)</b> your order will be automatically submitted.</em></p>
+			<div id="votedRestaurant" style="text-align: center; display: block">Your vote:  <b>You have not voted for a restaurant yet.</b></div>
+        <div id="submittedOrder" style="text-align: center; display: block">Your order: <b>You have not submitted an order yet.</b></div>
+        <hr>
+<!-- rest population
+
+				<div class="side">
+                    <div><p>Selected Restaurant:</p></div>
+                    <div id="selected-restaurant"></div>
+-->
+
+					<nav class="dr-menu dr-menu-open">
+						<ul class="nav nav-pills nav-stacked">
+							<li id="kt"><a class="dr-icon" href="#">King Taco <span column><img src="redstar.png" width="20" height="20" /><img src="redstar.png" width="20" height="20" /><img src="redstar.png" width="20" height="20" /></a></li>
+							
+							<li id="fc"><a class="dr-icon" href="#">Falafel Corner <img src="redstar.png" width="20" height="20" /><img src="redstar.png" width="20" height="20" /></a></li>
+							
+							<li id="zp"><a class="dr-icon" href="#">zPizza <img src="redstar.png" width="20" height="20" /><img src="redstar.png" width="20" height="20" /><img src="redstar.png" width="20" height="20" /><img src="redstar.png" width="20" height="20" /></a></li>
+							
+							<li id="ew"><a class="dr-icon" href="#">Eastern Winds <img src="redstar.png" width="20" height="20" /><img src="redstar.png" width="20" height="20" /><img src="redstar.png" width="20" height="20" /></a></li>
+							
+							<li id="in"><a class="dr-icon" href="#">Shalimar <img src="redstar.png" width="20" height="20" /><img src="redstar.png" width="20" height="20" /></a></li>
+
+						</ul>
+
+					</nav>
+
+
+
+
+				</div>
+        <div id="menu" class="main">
+          <div id="KingTacoMenu">
+            <h2>Tacos</h2>
+              <p class="menuItem" id="carneasada1">Carne Asada <img src="spicy.gif" /><img src="spicy.gif" /><img src="spicy.gif" /></p>
+
+                <p id="carneasada" style="font-size: 16px" class="menuDesc">Grilled steak</p>
+              <p class="menuItem" id="alpastor1">Al Pastor</p>
+                <p id="alpastor" style="font-size: 16px" class="menuDesc">Seasoned pork</p>
+              <p class="menuItem" id="carnitas1">Carnitas</p>
+                <p id="carnitas" style="font-size: 16px" class="menuDesc">Pork</p>
+              <p class="menuItem" id="cabeza1">Cabeza <img src="spicy.gif" /></p>
+                <p id="cabeza" style="font-size: 16px" class="menuDesc">Cheek</p>
+              <p class="menuItem" id="lengua1">Lengua <img src="spicy.gif" /><img src="spicy.gif" /></p>
+                <p id="lengua" style="font-size: 16px" class="menuDesc">Tongue</p>
+              <p class="menuItem">Chicken</p>
+            <h2>Burritos</h2>
+              <p class="menuItem">Bean and Cheese</p>
+              <p class="menuItem">Tripas</p>
+              <p class="menuItem">Molleja</p>
+              <p class="menuItem">Buche</p>
+              <p class="menuItem">Suadero</p>
+              <p class="menuItem">Carnitas</p>
+            
+          </div>
+          <div id="FalafelCornerMenu">
+
+            <h2>Burgers</h2>
+              <p class="menuItem">Double Cheeseburger</p>
+              <p class="menuItem">Avocado Ranch Burger</p>
+              <p class="menuItem">Tex- Mex Burger</p>
+              <p class="menuItem">Hawaiian Burger</p>
+              <p class="menuItem">Bacon Cheddar Burger</p>
+              <p class="menuItem">Chicken Shish Kabob</p>
+
+            <h2>Pizzas</h2>
+              <p class="menuItem">12inch Pepperoni</p>
+              <p class="menuItem">12inch Cheese</p>
+          </div>
+          <div id="ZPizzaMenu">
+            <h2>Sandwiches</h2>
+              <p class="menuItem">Hot Meatball</p>
+              <p class="menuItem">Turkey Breast</p>
+              <p class="menuItem">Pollo Latino</p>
+              <p class="menuItem">Supersub</p>
+
+            <h2>Personal Pizzas</h2>
+              <p class="menuItem">Pepperoni</p>
+              <p class="menuItem">Cheese</p>
+              <p class="menuItem">Ham & Pineapple</p>
+              <p class="menuItem">Cheese</p>
+
+            <h2>Calzones and Pastas</h2>
+              <p class="menuItem">Meat Calzone</p>
+              <p class="menuItem">Veggie Calzone</p>
+              <p class="menuItem">Penne with Meatballs</p>
+              <p class="menuItem">Chicken Penne</p>
+          </div>
+          <div id="EasternWindsMenu">
+          <h2>Chicken</h2>
+              <p class="menuItem">Sesame Chicken</p>
+              <p class="menuItem">Orange Chicken</p>
+              <p class="menuItem">Chicken and Broccoli</p>
+
+              <h2>Beef</h2>
+              <p class="menuItem">Mongolian Beef</p>
+              <p class="menuItem">Kung Pao Beef</p>
+              <p class="menuItem">Sesame Beef</p>
+
+              <h2>Seafood</h2>
+              <p class="menuItem">Prawns with Broccoli</p>
+              <p class="menuItem">Prawns with Black Bean Sauce</p>
+              <p class="menuItem">Tofu Prawns</p>
+              <p class="menuItem">Curry Shrimp</p>
+
+          </div>
+          <div id="IndianMenu">
+
+          <h2>Curries</h2>
+              <p class="menuItem">Saag Chicken</p>
+              <p class="menuItem">Beef Jalfrezi</p>
+              <p class="menuItem">Nihari</p>
+
+              <h2>Tandoori BBQ</h2>
+              <p>Tandoori Chop</p>
+              <p>Seekh Kebab</p>
+              <p>Murgh Tikka Lahori</p>
+              <p>Malai Boti</p>
+          </div>
+        </div>
+
+
+        </script>
+      </div><!-- /container -->
+		<script src="js/script.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,192 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #222222;
+	font-weight: 300;
+	background: url("http://freegeneraldirectories.com/wp-content/uploads/2014/04/cream-background-texturelove-doughnuts-menu-doughnuts-pzc4cflh.jpg") scroll;
+}
+
+
+a {
+	color: #222222;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+}
+
+.main,
+.container > header {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 1.875em 3.125em 1.875em;
+}
+
+/* Some animation I'm trying*/
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.main {
+	max-width: 69em;
+	min-height: 600px;
+	padding: 2em 7em 1em 0;
+
+	opacity:0;
+	-webkit-animation:fadeIn ease-in 1;
+	-webkit-animation-fill-mode:forwards;
+	-webkit-animation-duration:1s;
+}
+
+
+
+.main p {
+	font-size: 2em;
+	padding: 0 1em;
+	margin: 0;
+	line-height: 1.5;
+	float: right;
+	width: 70%;
+	text-align: center;
+}
+
+.menuItem:hover{
+	background-color: #e0e0e0;
+}
+
+.main h2{
+	
+    line-height:2;
+    float:right;
+    width:70%;
+    background-image:
+    linear-gradient(
+      rgb(229, 197, 165), rgb(160, 126, 46)
+    );
+    /*background-color: rgb(229, 197, 165);*/
+    border-radius: 10px;
+    color: black;
+
+}
+
+.main > h2~p{
+
+    font-size: 18px;
+    color: grey;
+}
+
+.container > header {
+	padding: 2.875em 1.875em 2.875em;
+	text-align: center;
+	/*background: #333333;*/
+	/*border-radius: 25px;*/
+	background-image:
+    linear-gradient(
+      #3D2914, #B89470
+    );
+}
+
+.container > header h1 {
+
+	font-size: 50px;
+	line-height: 1.3;
+	margin: 0;
+	color: #e6e6e6;
+	font-weight: 300;
+}
+
+.container > header span {
+	display: block;
+	font-size: 60%;
+	padding: 0 0 0.6em 0.1em;
+}
+
+/* Header Style */
+.codrops-top {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.85);
+	text-transform: uppercase;
+	position: relative;
+	font-size: 0.68em;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+	line-height: 2.2;
+}
+
+.codrops-top a {
+	padding: 0 1em;
+	letter-spacing: 0.1em;
+	color: #333;
+	display: inline-block;
+}
+
+.codrops-top a:hover {
+	background: rgba(255,255,255,0.99);
+	color: #000;
+}
+
+.codrops-top span.right {
+	float: right;
+}
+
+.codrops-top span.right a {
+	float: left;
+	display: block;
+}
+
+@media screen and (max-width: 66.9375em) {
+	.side, .main p {
+		float: none;
+		width: 100%;
+		box-shadow: none;
+		padding: 1em;
+	}
+
+	.main p {
+		font-size: 130%;
+	}
+}
+
+#instructions{
+	text-align:center;
+	font-size: 20px;
+	
+}
+
+#votedRestaurant,#submittedOrder{
+
+	font-size: 18px;
+
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+}
