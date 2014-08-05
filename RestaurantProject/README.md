@@ -1,3 +1,1 @@
-Created by Codrops
-
-Please read about our license: http://tympanus.net/codrops/licensing/
+First restaurant project done with Peter (http://github.com/123peterkim)
